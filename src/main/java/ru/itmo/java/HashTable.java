@@ -3,17 +3,6 @@ package ru.itmo.java;
 import static java.lang.Math.abs;
 
 public class HashTable {
-	private class Pair {
-		private final Object key;
-		private final Object value;
-		private boolean deleted = false;
-
-		private Pair(Object key, Object value) {
-			this.key = key;
-			this.value = value;
-		}
-	}
-
 	private Pair[] table;
 	private float loadFactor = 0.5f;
 	private int capacity;
@@ -129,4 +118,14 @@ public class HashTable {
 		return size;
 	}
 
+	private class Pair {
+		private final Object key;
+		private final Object value;
+		private boolean deleted = false;
+
+		private Pair(Object key, Object value) {
+			this.key = key;
+			this.value = value;
+		}
+	}
 }
